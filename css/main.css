@@ -5,8 +5,29 @@
     box-sizing: border-box;
 }
 
-/* ESTILOS GENERALES */
+/* estilos botones sección productos*/
 
+.h1Productos{
+    font-size: 1.4rem;
+}
+.btn-estilos{
+    background-color:  #f8ced8;
+    box-shadow: 2px 3px black;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.btn-estilos:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    text-align: center;
+    justify-content: araound;
+}
+
+/* ESTILOS GENERALES */
 /* propiedades del padre*/
 .container{
     height: 100vh;
@@ -22,7 +43,7 @@
                          "section2 section2 section2 section2"
                          "footer footer footer footer";
     justify-content: center;                     
-/* el GAP es el espacio entre los columnas y filas*/                         
+/* el GAP, espacio entre los columnas y filas*/                         
     gap: 0.8rem;               
 }
 
@@ -130,6 +151,18 @@ h2{
 .section2{
     grid-area: section2;
     margin: auto;
+}
+
+/*main html Productos*/
+.card-title{
+    font-size: 1.2rem;
+}
+.card-text{
+    font-size: 0.8rem;
+}
+
+.estilos-card{
+    margin: 1rem;
 }
 
 footer{
