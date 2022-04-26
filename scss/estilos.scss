@@ -1,0 +1,233 @@
+// estilos botones sección productos - Bootstrap
+
+.h1Productos{
+    font-size: 1.4rem;
+}
+.btn-estilos{
+    background-color:  #f8ced8;
+    box-shadow: 2px 3px black;
+    font: {
+        weight: bold;
+        size: 0.8rem;
+    }
+    letter-spacing: 0.3rem;
+}
+
+.btn-estilos:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    text-align: center;
+    justify-content: araound;
+}
+
+// ESTILOS GENERALES 
+// propiedades del padre
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
+
+
+//propiedad para estructurar por áreas
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "section1 section1 section1 section1"
+                         "section2 section2 section2 section2"
+                         "footer footer footer footer";
+    justify-content: center;                     
+// el GAP, espacio entre los columnas y filas                       
+    gap: 0.8rem;               
+}
+
+
+// propiedades de las áreas
+@mixin condicion($color){
+    background-color: $color;
+
+    //condicional
+    @if $color == orange{
+        background-color: #fff4f3;
+    } @else {
+        background-color: pink;
+    }
+} 
+body{
+    @include condicion(orange)
+}
+
+header{
+    grid-area: header;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+//propiedades del logo
+.logo{
+    text-align: left;
+    margin-left: 2rem;
+    .imgLogo{
+        width: auto;
+        height: 6rem;
+        right: auto; 
+    }
+}
+
+//propiedades del menú
+.nav{
+    background-color: black;
+    padding: 0.05rem;
+    ul li{ list-style-type: none;
+        text-transform: uppercase;
+        flex-direction: row;
+        border-radius: 1rem;
+        .botonNav{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+//transformaciones menú
+nav ul li:hover{
+    background-color: #f8ced8;
+    box-shadow: 1px 1px white;
+}
+
+h1{
+    margin: 0.3rem;
+    color: rgb(8, 8, 8);
+    font-size: 1.5rem;
+}
+
+main{
+    grid-area: main;
+    text-align: center;
+}
+
+%parrafo{
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.6rem;
+}
+h2{
+    @extend %parrafo; 
+}
+h3{
+    @extend %parrafo;
+}
+.imgMain{
+    width: 65%;
+}
+
+//transformaciones y animaciones de img Ofertas
+.imgAnimation{
+    animation-name: girar;
+    animation-iteration-count:inherit;
+    animation-duration: 5s;
+}  
+
+@keyframes girar{
+    from{
+        transform: scale(1.0);
+    }
+    to{
+        transform: scale(1.1);
+    }
+ }
+ 
+.imgHidden{
+    display: none;
+}
+
+.form{ 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.section1{
+    grid-area: section1;
+    margin: auto;
+}
+
+.section2{
+    grid-area: section2;
+    margin: auto;
+}
+
+//main html Productos
+.card-title{
+    font-size: 1.2rem;
+}
+.card-text{
+    font-size: 0.8rem;
+}
+
+.estilos-card{
+    margin: 1rem;
+}
+
+//footer de todos los html-secciones
+footer{
+    grid-area: footer;
+    background-color: #dde4f1;
+    padding: 1rem;    
+    p{  
+        font-size: 0.7rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+//media queries
+@media only screen and (min-width:600px){
+    .container{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
+    
+        grid-template-areas: "header header"
+                             "main main"
+                             "section1 section2"
+                             "footer footer";
+        justify-content: center;
+        
+    }  
+    
+    .imgHidden{
+        display: inline-block;
+    }
+    .nav ul li{
+        display: inline-block;
+    }
+
+    .botonNav{
+        padding: 0.8rem;
+    }
+    
+    .imgMain{
+        width: 35%;
+    }      
+    
+    .section1, .section2{
+        width: 60%;
+    }
+    .section1{
+        margin-left: 30%;
+    }
+    .section2{
+        margin-right: 30%;
+    }
+    .section2 p{
+        text-align: right;
+    }
+}

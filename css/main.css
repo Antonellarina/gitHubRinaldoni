@@ -1,226 +1,148 @@
-/* reset css*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.h1Productos {
+  font-size: 1.4rem; }
 
-/* estilos botones sección productos*/
+.btn-estilos {
+  background-color: #f8ced8;
+  box-shadow: 2px 3px black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem; }
 
-.h1Productos{
-    font-size: 1.4rem;
-}
-.btn-estilos{
-    background-color:  #f8ced8;
-    box-shadow: 2px 3px black;
-    font-weight: bold;
-    letter-spacing: 0.3rem;
-    font-size: 0.8rem;
-}
+.btn-estilos:hover {
+  transform: scale(1.1); }
 
-.btn-estilos:hover{
-    transform: scale(1.1);
-}
+.card-body {
+  text-align: center;
+  justify-content: araound; }
 
-.card-body{
-    text-align: center;
-    justify-content: araound;
-}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
+  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "footer footer footer footer";
+  justify-content: center;
+  gap: 0.8rem; }
 
-/* ESTILOS GENERALES */
-/* propiedades del padre*/
-.container{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
+body {
+  background-color: orange;
+  background-color: #fff4f3; }
 
+header {
+  grid-area: header;
+  padding: 0.2rem;
+  text-align: center; }
 
-/*propiedad para estructurar por áreas*/
-    grid-template-areas: "header header header header"
-                         "main main main main"
-                         "section1 section1 section1 section1"
-                         "section2 section2 section2 section2"
-                         "footer footer footer footer";
-    justify-content: center;                     
-/* el GAP, espacio entre los columnas y filas*/                         
-    gap: 0.8rem;               
-}
-
-
-/* propiedades de las áreas*/
-body{
-    background-color: #fff4f3;
-}
-
-header{
-    grid-area: header;
-    padding: 0.2rem;
-    text-align: center;
-}
-
-.logo{
-    text-align: left;
-    margin-left: 2rem;
-}
-
-.imgLogo{
+.logo {
+  text-align: left;
+  margin-left: 2rem; }
+  .logo .imgLogo {
     width: auto;
     height: 6rem;
-    right: auto; 
-}
+    right: auto; }
 
-/* propiedades del menú*/
-.nav{
-    background-color: black;
-    padding: 0.6rem;
-}
-
-.nav ul li {
+.nav {
+  background-color: black;
+  padding: 0.05rem; }
+  .nav ul li {
     list-style-type: none;
     text-transform: uppercase;
     flex-direction: row;
-    border-radius: 1rem;
+    border-radius: 1rem; }
+    .nav ul li .botonNav {
+      color: white;
+      text-decoration: none;
+      font-weight: bold; }
 
-}
+nav ul li:hover {
+  background-color: #f8ced8;
+  box-shadow: 1px 1px white; }
 
-.botonNav{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+h1 {
+  margin: 0.3rem;
+  color: #080808;
+  font-size: 1.5rem; }
 
-/* transformaciones menú*/
-nav ul li:hover{
-    background-color: #f8ced8;
-    box-shadow: 1px 1px white;
-}
+main {
+  grid-area: main;
+  text-align: center; }
 
-h1{
-    margin: 0.3rem;
-    color: rgb(8, 8, 8)
-}
+h2, h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.6rem; }
 
-main{
-    grid-area: main;
-    text-align: center;
-}
+.imgMain {
+  width: 65%; }
 
-h2{
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.6rem;
-}
+.imgAnimation {
+  animation-name: girar;
+  animation-iteration-count: inherit;
+  animation-duration: 5s; }
 
-.imgMain{
-    width: 65%;
-}
+@keyframes girar {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
 
-/* transformaciones y animaciones de img Ofertas*/
-.imgAnimation{
-    animation-name: girar;
-    animation-iteration-count:inherit;
-    animation-duration: 5s;
-}  
+.imgHidden {
+  display: none; }
 
-@keyframes girar{
-    from{
-        transform: scale(1.0);
-    }
-    to{
-        transform: scale(1.1);
-    }
- }
- 
+.form {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
-.imgHidden{
-    display: none;
-}
+.section1 {
+  grid-area: section1;
+  margin: auto; }
 
-.form{ 
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
+.section2 {
+  grid-area: section2;
+  margin: auto; }
 
-.section1{
-    grid-area: section1;
-    margin: auto;
-}
+.card-title {
+  font-size: 1.2rem; }
 
-.section2{
-    grid-area: section2;
-    margin: auto;
-}
+.card-text {
+  font-size: 0.8rem; }
 
-/*main html Productos*/
-.card-title{
-    font-size: 1.2rem;
-}
-.card-text{
-    font-size: 0.8rem;
-}
+.estilos-card {
+  margin: 1rem; }
 
-.estilos-card{
-    margin: 1rem;
-}
-
-footer{
-    grid-area: footer;
-    background-color: #dde4f1;
-    padding: 1rem;    
-}
-
-footer p{  
+footer {
+  grid-area: footer;
+  background-color: #dde4f1;
+  padding: 1rem; }
+  footer p {
     font-size: 0.7rem;
     text-align: center;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-}
+    flex-direction: column; }
 
-
-/*media queries */
-@media only screen and (min-width:600px){
-    .container{
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
-    
-        grid-template-areas: "header header"
-                             "main main"
-                             "section1 section2"
-                             "footer footer";
-        justify-content: center;
-        
-    }  
-    
-    .imgHidden{
-        display: inline-block;
-    }
-    .nav ul li{
-        display: inline-block;
-    }
-
-    .botonNav{
-        padding: 0.8rem;
-    }
-    
-    .imgMain{
-        width: 35%;
-    }      
-    
-    .section1, .section2{
-        width: 60%;
-    }
-    .section1{
-        margin-left: 30%;
-    }
-    .section2{
-        margin-right: 30%;
-    }
-    .section2 p{
-        text-align: right;
-    }
-}
+@media only screen and (min-width: 600px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.3fr;
+    grid-template-areas: "header header" "main main" "section1 section2" "footer footer";
+    justify-content: center; }
+  .imgHidden {
+    display: inline-block; }
+  .nav ul li {
+    display: inline-block; }
+  .botonNav {
+    padding: 0.8rem; }
+  .imgMain {
+    width: 35%; }
+  .section1, .section2 {
+    width: 60%; }
+  .section1 {
+    margin-left: 30%; }
+  .section2 {
+    margin-right: 30%; }
+  .section2 p {
+    text-align: right; } }
