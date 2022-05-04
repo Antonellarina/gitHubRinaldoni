@@ -68,24 +68,22 @@ body{
 header{
     grid-area: header;
     text-align: center;   
-    height: 15rem;
+    height: 7rem;
+    background-color: black;
 }
 
-.logoNav{
-    background-color: black;
-    height: 8rem;
-}
 //propiedades del logo
 .logo{
-    text-align: left;
+    text-align: center;
     .imgLogo{
         height: 6rem;
-        margin-left: 3rem;
     }
 }
 
 //propiedades del menú
 .nav{
+    background-color: black;
+    height: 2rem;
     ul li{ list-style-type: none;
         text-transform: uppercase;
         flex-direction: row;
@@ -108,8 +106,8 @@ nav ul li:hover{
 h1{
     color: rgb(8, 8, 8);
     font-size: 1.5rem;
-    height: 6rem;
-    margin-top: 3rem;
+    height: 2.5rem;
+    margin-top: 4rem;
 }
 
 main{

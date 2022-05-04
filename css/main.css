@@ -38,27 +38,26 @@ body {
 header {
   grid-area: header;
   text-align: center;
-  height: 15rem; }
-
-.logoNav {
-  background-color: black;
-  height: 8rem; }
+  height: 7rem;
+  background-color: black; }
 
 .logo {
-  text-align: left; }
+  text-align: center; }
   .logo .imgLogo {
-    height: 6rem;
-    margin-left: 3rem; }
+    height: 6rem; }
 
-.nav ul li {
-  list-style-type: none;
-  text-transform: uppercase;
-  flex-direction: row;
-  border-radius: 1rem; }
-  .nav ul li .botonNav {
-    color: white;
-    text-decoration: none;
-    font-weight: bold; }
+.nav {
+  background-color: black;
+  height: 2rem; }
+  .nav ul li {
+    list-style-type: none;
+    text-transform: uppercase;
+    flex-direction: row;
+    border-radius: 1rem; }
+    .nav ul li .botonNav {
+      color: white;
+      text-decoration: none;
+      font-weight: bold; }
 
 nav ul li:hover {
   background-color: #f8ced8;
@@ -67,8 +66,8 @@ nav ul li:hover {
 h1 {
   color: #080808;
   font-size: 1.5rem;
-  height: 6rem;
-  margin-top: 3rem; }
+  height: 2.5rem;
+  margin-top: 4rem; }
 
 main {
   grid-area: main;
