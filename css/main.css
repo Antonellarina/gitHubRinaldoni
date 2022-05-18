@@ -76,6 +76,9 @@ main {
   grid-area: main;
   text-align: center; }
 
+.clickOfertas {
+  color: #f09db0; }
+
 h2, h3 {
   text-align: center;
   font-size: 1rem;
@@ -123,7 +126,8 @@ h2, h3 {
   align-items: center;
   padding: 10px;
   border-radius: 15px;
-  max-width: 200px; }
+  max-width: 200px;
+  margin-right: 1rem; }
 
 .section31 {
   grid-area: section31;
@@ -182,3 +186,20 @@ footer {
     margin-right: 30%; }
   .section2 p {
     text-align: right; } }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 2fr 2fr 0.3fr;
+    grid-template-areas: "header header" "main main" "section1 section1" "section2 section2" "section31 section31" "section32 section32" "footer footer";
+    justify-content: center; }
+  .video {
+    width: 90%; }
+  .section1 p {
+    text-align: center;
+    align-items: center; }
+  .section2 p {
+    text-align: center;
+    align-items: center; } }
