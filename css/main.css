@@ -3,24 +3,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-.h1Productos {
-  font-size: 1.4rem;
-  font-weight: bold; }
-
-.btn-estilos {
-  background-color: #f8ced8;
-  box-shadow: 2px 3px black;
-  font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 0.3rem; }
-
-.btn-estilos:hover {
-  transform: scale(1.1); }
-
-.card-body {
-  text-align: center;
-  justify-content: araound; }
-
 .container {
   height: 100vh;
   display: grid;
@@ -47,6 +29,12 @@ header {
   .logo .imgLogo {
     height: 6rem; }
 
+.socialMedia {
+  text-align: right;
+  margin-right: 2rem; }
+  .socialMedia .redes {
+    width: 2rem; }
+
 .nav {
   background-color: black; }
   .nav ul li {
@@ -66,23 +54,23 @@ nav ul li:hover {
   background-color: #f8ced8;
   box-shadow: 1px 1px white; }
 
+main {
+  grid-area: main;
+  text-align: center; }
+
 h1 {
   color: #080808;
   font-size: 1.5rem;
   height: 2.5rem;
   margin-top: 1rem; }
 
-main {
-  grid-area: main;
-  text-align: center; }
-
-.clickOfertas {
-  color: #f09db0; }
-
 h2, h3 {
   text-align: center;
   font-size: 1rem;
   padding: 0.6rem; }
+
+.clickOfertas {
+  color: #f09db0; }
 
 .imgMain {
   width: 65%; }
@@ -103,11 +91,6 @@ h2, h3 {
 
 .imgHidden {
   display: none; }
-
-.form {
-  display: flex;
-  justify-content: center;
-  align-content: center; }
 
 .section1 {
   grid-area: section1;
@@ -149,6 +132,24 @@ h2, h3 {
 
 .estilos-card {
   margin: 1rem; }
+
+.h1Productos {
+  font-size: 1.4rem;
+  font-weight: bold; }
+
+.btn-estilos {
+  background-color: #f8ced8;
+  box-shadow: 2px 3px black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem; }
+
+.btn-estilos:hover {
+  transform: scale(1.1); }
+
+.card-body {
+  text-align: center;
+  justify-content: araound; }
 
 footer {
   grid-area: footer;
