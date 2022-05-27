@@ -145,7 +145,8 @@ h2, h3 {
   letter-spacing: 0.3rem; }
 
 .btn-estilos:hover {
-  transform: scale(1.1); }
+  transform: scale(1.1);
+  cursor: pointer; }
 
 .card-body {
   text-align: center;
